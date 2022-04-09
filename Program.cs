@@ -6,17 +6,21 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            int[] array = new int[10] {5,-1,6,-3,5,4,-2,-9,-54,76};
+            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
             int count = 0;
 
-            foreach (var i in array)
+            for (int i = 0; i < arr.GetUpperBound(0)+1; i++)
             {
-                if (i>0)
+                for (int j = 0; j < arr.GetUpperBound(1) + 1; j++)
                 {
-                    count ++;
+                    if (arr[i,j] > 0)
+                    {
+                    count++;
+                    }
                 }
             }
-            Console.WriteLine(count);
+            
+              Console.WriteLine(count);
         }
         
     }
