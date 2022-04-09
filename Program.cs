@@ -6,22 +6,17 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
-            int change;
+            int[] array = new int[10] {5,-1,6,-3,5,4,-2,-9,-54,76};
+            int count = 0;
 
-            for (int i=0; i < arr.Length; i++)
+            foreach (var i in array)
             {
-                for (int j = 1+i; j < arr.Length; j++)
+                if (i>0)
                 {
-                    if (arr[i] > arr[j])
-                    {
-                        change = arr[j];
-                        arr[j] = arr[i];
-                        arr[i] = change;
-                    }
+                    count ++;
                 }
-                Console.Write(arr[i]+" ");
             }
+            Console.WriteLine(count);
         }
         
     }
